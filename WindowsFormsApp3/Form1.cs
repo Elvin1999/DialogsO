@@ -73,5 +73,45 @@ namespace WindowsFormsApp3
                 }
             }
         }
+
+        private void changeToGreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.Green;
+        }
+
+        private void changeToRedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.Red;
+        }
+
+        private void changeToForeRedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var item in this.Controls)
+            {
+                if(item is Label lb)
+                {
+                    lb.ForeColor  =Color.Red;
+                }
+                else if(item is Button bt)
+                {
+                    bt.ForeColor =Color.Red;
+                }
+            }
+        }
+
+        private void changeToForeBlackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var item in this.Controls)
+            {
+                if (item is Label lb)
+                {
+                    lb.ForeColor = Color.Black;
+                }
+                else if (item is Button bt)
+                {
+                    bt.ForeColor = Color.Black;
+                }
+            }
+        }
     }
 }
